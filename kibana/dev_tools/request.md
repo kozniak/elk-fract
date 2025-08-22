@@ -1,10 +1,13 @@
 ### Check index
 ---
 
+```http
 GET _cat/indices?v
+```
 
+```http
 GET _cat/indices?h=index
-
+```
 
 ### Create new index
 ---
@@ -26,4 +29,6 @@ PUT my-new-index
 ### Delete index
 ---
 
+```http
 DELETE my-old-index
+```
