@@ -11,6 +11,7 @@ GET _cat/indices?h=index
 
 PUT my-new-index
 
+```http
 PUT my-new-index
 {
   "mappings": {
@@ -20,7 +21,7 @@ PUT my-new-index
     }
   }
 }
-
+```
 
 ### Delete index
 ---
