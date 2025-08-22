@@ -1,0 +1,12 @@
+[
+    {
+        "@timestamp": "{{date}}",
+        "rule.id": "{{rule.id}}",
+        "rule.name": "{{rule.name}}",
+
+        "event_tag": "{{#context.hits}}{{_source.event_tag}}{{/context.hits}}",
+        "src_ip": "{{#context.hits}}{{_source.src_ip}}{{/context.hits}}",
+        "dst_port": "{{#context.hits}}{{_source.dst_port}}{{/context.hits}}",
+        "msg": "{{#context.hits}}{{_source.msg}}{{/context.hits}}"
+    }
+]
