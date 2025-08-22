@@ -12,7 +12,9 @@ GET _cat/indices?h=index
 ### Create new index
 ---
 
+```http
 PUT my-new-index
+```
 
 ```http
 PUT my-new-index
