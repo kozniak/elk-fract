@@ -1,0 +1,17 @@
+// First step: add `server.publicBaseUrl: <your-elk-address>` to kibana.yml 
+// Without this setting, fields like rule.url and kibana.url in alerts will remain empty.
+
+{
+  "@timestamp": "{{date}}",
+  "rule": {
+    "id": "{{rule.id}}",
+    "name": "{{rule.name}}"
+  },
+  "event_tag": "{{#context.alerts}}{{event_tag}}{{/context.alerts}}",
+  "src_ip": "{{#context.alerts}}{{src_ip}}{{/context.alerts}}",
+  "src_port": "{{#context.alerts}}{{src_port}}{{/context.alerts}}",
+  "msg": "{{#context.alerts}}{{msg}}{{/context.alerts}}",
+  "src_ip_2": "{{#context.alerts}}{{src_ip}}{{/context.alerts}}",
+  "kibana_url": "{{kibanaBaseUrl}}",
+  "rule_url": "{{rule.url}}" 
+}
